@@ -13,6 +13,9 @@ struct studentOut {
     float avgRating;
 };
 
+// конвертує рядок розділений комами в структуру
 studentIn csv2studentIn(std::string);
+
+// конвертує стуктуру в рядок розділений комами
 std::string studentOut2csv(studentOut);
 void print(studentIn);

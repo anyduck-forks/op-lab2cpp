@@ -3,15 +3,20 @@
 #include <vector>
 
 #include "student.hpp"
+#include "utils.hpp"
 
 using namespace std;
 
-// TODO: remove stub
+
 studentIn csv2studentIn(string student) {
+    vector<string> tmp = split(student, ',');
     studentIn out;
-    out.surname = "Test";
-    out.rating = vector<int> {60, 70, 80, 90, 100};
-    out.isContract = false;
+
+    out.surname = tmp.at(0);
+    for (size_t i = 1; i < 6; i++)
+        out.rating.push_back(stoi(tmp.at(i)));
+    out.isContract = flag2bool(tmp.at(6));
+
     return out;
 }
 
