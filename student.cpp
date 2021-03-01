@@ -7,15 +7,16 @@
 
 using namespace std;
 
-// TODO: remove stub
+
 studentIn csv2studentIn(string student) {
     vector<string> tmp = split(student, ',');
     studentIn out;
+
     out.surname = tmp.at(0);
-    for (size_t i = 1; i < 6; i++) {
+    for (size_t i = 1; i < 6; i++)
         out.rating.push_back(stoi(tmp.at(i)));
-    }
-    out.isContract = false; // tmp.at(6)
+    out.isContract = flag2bool(tmp.at(6));
+
     return out;
 }
 
