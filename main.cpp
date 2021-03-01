@@ -3,11 +3,13 @@
 #include <string>
 #include <vector>
 
+#include "student.hpp"
+
 using namespace std;
 
 
-vector<string> loadCsv(string path) {
-    vector<string> out;
+vector<studentIn> loadCsv(string path) {
+    vector<studentIn> out;
     ifstream csv(path);
     string line;
 
@@ -18,17 +20,17 @@ vector<string> loadCsv(string path) {
 
     getline(csv, line); // пропускаємо перший рядок
     while (getline(csv, line))
-        out.push_back(line);
+        out.push_back(csv2studentIn(line));
     csv.close();
     return out;
 }
 
 
 int main() {
-    vector<string> table = loadCsv("./examples/students1.csv");
+    vector<studentIn> table = loadCsv("./examples/students1.csv");
 
-    for (string student: table)
-        cout << student << endl;
+    for (studentIn student: table)
+        print(student);
 
     return 0;
 }
