@@ -9,6 +9,15 @@
 using namespace std;
 
 
+string getDirectory() {
+    string directory;
+    cout << "Введіть шлях папки з CSV фалами: ";
+    getline(cin, directory);
+
+    return directory;
+}
+
+
 // Зчитує дані з csv файлу у вектор з studentIn
 vector<studentIn> loadCsv(string path) {
     vector<studentIn> out;
@@ -42,7 +51,8 @@ vector<studentIn> loadTable(string direcotry) {
 
 
 int main() {
-    vector<studentIn> table = loadTable("./examples/");
+    string directory = getDirectory();
+    vector<studentIn> table = loadTable(directory);
 
     for (studentIn student: table)
         print(student);
