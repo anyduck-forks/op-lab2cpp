@@ -1,24 +1,21 @@
 {
-    "launch": {
-        "version": "0.2.0",
-        "configurations": [
-            {
-                "name": "Build & Debug C++",
-                "type": "cppdbg",
-                "request": "launch",
-                "program": "${workspaceFolder}/main.out",
-                "cwd": "${workspaceFolder}",
-                "MIMode": "gdb",
-                "setupCommands": [
-                    {
-                        "description": "Enable pretty-printing for gdb",
-                        "text": "-enable-pretty-printing",
-                        "ignoreFailures": true
-                    }
-                ],
-                "preLaunchTask": "Build C++",
-                "miDebuggerPath": "/usr/bin/gdb"
-            }
-        ]
-    }
+    "configurations": [
+        {
+            "name": "Build & Debug C++",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.out",
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build C++",
+            "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
 }
