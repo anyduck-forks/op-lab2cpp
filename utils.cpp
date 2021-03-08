@@ -22,9 +22,29 @@ bool flag2bool(string flag)
         return true;
     if (f == "false" || f == "no")
         return false;
-    throw invalid_argument("Невідоме булеве значення - \"" + flag + "\"");
+    if (f[0] == '-')
+    {
+        for (size_t i = 0; i < f.size(); i++)
+        {
+            if (f[i] != '-')
+            {
+                throw invalid_argument("Невідоме булеве значення - \"" + flag + "\"");
+            }
+        }
+    return false;
+    }
+    if (f[0] == '+')
+    {
+        for (size_t i = 0; i < f.size(); i++)
+        {
+            if (f[i] != '+')
+            {
+                throw invalid_argument("Невідоме булеве значення - \"" + flag + "\"");
+            }
+        }
+    return true;
+    }
 }
-
 vector<string> split(string str, char delim)
 {
     vector<string> out;
