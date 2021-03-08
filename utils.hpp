@@ -4,11 +4,11 @@
 // Повертає список файлів з заданим росширення в заданій папці
 std::vector<std::string> listFiles(std::string, std::string);
 
-// конвертує рядок в булеву змінну
+// Конвертує рядок в булеву змінну
 bool flag2bool(std::string);
 
-// поділяє рядок за розділювачем
+// Поділяє рядок за розділювачем
 std::vector<std::string> split(std::string, char);
 
-// округлення числа
+// Округлює число до заданої к-сті знаків після коми
 double roundOff(double x, int precision);

@@ -56,7 +56,7 @@ vector<studentOut> calcAverageMark(vector<studentIn> budgetList)
         {
             sum += mark;
         }
-        double avgRating = roundOff((double)sum / student.rating.size(), 3);
+        double avgRating = roundOff((double) sum / student.rating.size(), 3);
 
         studentOut student_budget;
         student_budget.surname = student.surname;

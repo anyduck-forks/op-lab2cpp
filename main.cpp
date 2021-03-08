@@ -8,13 +8,14 @@
 
 using namespace std;
 
+// Отримати шлях до директорії
 string getDirectory();
 
 // Зчитує дані з усіх csv файлів в папці у вектор з studentIn
-vector<studentIn> loadTable(string direcotry);
+vector<studentIn> loadTable(string);
 
 // Зберігає дані у таблицю
-void saveTable(vector<studentOut> table_rating);
+void saveTable(vector<studentOut>, string);
 
 int main()
 {
@@ -27,7 +28,7 @@ int main()
 
     cout << "Мінімальна оцінка для стипендії це " << table_rating.back().avgRating << endl;
 
-    saveTable(table_rating);
+    saveTable(table_rating, "rating.csv");
 
     return 0;
 }
@@ -73,7 +74,8 @@ vector<studentIn> loadTable(string direcotry)
 
     return out;
 }
-void saveTable(vector<studentOut> table_rating)
+
+void saveTable(vector<studentOut> table_rating, string path)
 {
     ofstream outcsv("./rating.csv");
     for (studentOut rating_student : table_rating)

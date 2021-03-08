@@ -15,21 +15,21 @@ struct studentOut
     double avgRating;
 };
 
-// конвертує рядок розділений комами в структуру
+// Конвертує рядок розділений комами в структуру
 studentIn csv2studentIn(std::string);
 
-// вивід данних студентів
+// Вивід данних студентів
 void print(studentIn);
 void print(studentOut);
 
-// створює окремий список бюджетників
+// Створює окремий список бюджетників
 std::vector<studentIn> budgetStudents(std::vector<studentIn> students);
 
-// обчислення для кожного студента-бюджетника середнього балу
+// Обчислює для кожного студента-бюджетника середній бал
 std::vector<studentOut> calcAverageMark(std::vector<studentIn> budgetList);
 
-// сортування списку бюджетників
+// Сортує список бюджетників
 void sortingList(std::vector<studentOut> &averageMarkList);
 
-//обрізання списку до 40%
+// Обрізає список до 40%
 void cuttingList(std::vector<studentOut> &averageMarkList);
