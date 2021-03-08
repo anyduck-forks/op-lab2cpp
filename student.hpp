@@ -2,13 +2,15 @@
 #include <string>
 #include <vector>
 
-struct studentIn {
+struct studentIn
+{
     std::string surname;
     std::vector<int> rating;
     bool isContract;
 };
 
-struct studentOut {
+struct studentOut
+{
     std::string surname;
     double avgRating;
 };
@@ -27,7 +29,7 @@ std::vector<studentIn> budgetStudents(std::vector<studentIn> students);
 std::vector<studentOut> calcAverageMark(std::vector<studentIn> budgetList);
 
 // сортування списку бюджетників
-std::vector<studentOut> sortingList(std::vector<studentOut> averageMarkList);
+void sortingList(std::vector<studentOut> &averageMarkList);
 
-//обрізання списку до 40% 
-std::vector<studentOut> cuttingList(std::vector<studentOut> averageMarkList);
+//обрізання списку до 40%
+void cuttingList(std::vector<studentOut> &averageMarkList);

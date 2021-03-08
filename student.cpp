@@ -66,7 +66,7 @@ vector<studentOut> calcAverageMark(vector<studentIn> budgetList)
     return averageMarkList;
 }
 
-vector<studentOut> sortingList(vector<studentOut> averageMarkList)
+void sortingList(vector<studentOut> &averageMarkList)
 {
     for (size_t i = 0; i < averageMarkList.size() - 1; i++)
     {
@@ -78,12 +78,10 @@ vector<studentOut> sortingList(vector<studentOut> averageMarkList)
             }
         }
     }
-    return averageMarkList;
 }
 
-vector<studentOut> cuttingList(vector<studentOut> averageMarkList)
+void cuttingList(vector<studentOut> &averageMarkList)
 {
     size_t new_size = averageMarkList.size() * 40 / 100;
     averageMarkList.resize(new_size);
-    return averageMarkList;
 }
