@@ -13,9 +13,9 @@ studentIn csv2studentIn(string student)
     studentIn out;
 
     out.surname = tmp.at(0);
-    for (size_t i = 1; i < 6; i++)
+    for (size_t i = 1; i < tmp.size()-1; i++)
         out.rating.push_back(stoi(tmp.at(i)));
-    out.isContract = flag2bool(tmp.at(6));
+    out.isContract = flag2bool(tmp.back());
 
     return out;
 }
