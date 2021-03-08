@@ -59,6 +59,5 @@ vector<string> listFiles(string directory, string extension)
 double roundOff(double x, int precision)
 {
     double power_of_10 = pow(10, precision);
-    cout << round(x * power_of_10) / power_of_10;
     return double(round(x * power_of_10)) / power_of_10;
 }

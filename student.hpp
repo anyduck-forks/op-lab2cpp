@@ -16,8 +16,6 @@ struct studentOut {
 // конвертує рядок розділений комами в структуру
 studentIn csv2studentIn(std::string);
 
-// конвертує стуктуру в рядок розділений комами
-std::string studentOut2csv(studentOut);
 // вивід данних студентів
 void print(studentIn);
 void print(studentOut);

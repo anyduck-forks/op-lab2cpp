@@ -20,12 +20,6 @@ studentIn csv2studentIn(string student)
     return out;
 }
 
-// TODO: remove stub
-string studentOut2csv(studentOut student)
-{
-    return "Test,80.000";
-}
-
 void print(studentIn student)
 {
     cout << student.surname << " ";
