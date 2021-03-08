@@ -7,8 +7,8 @@
 
 using namespace std;
 
-
-studentIn csv2studentIn(string student) {
+studentIn csv2studentIn(string student)
+{
     vector<string> tmp = split(student, ',');
     studentIn out;
 
@@ -21,13 +21,53 @@ studentIn csv2studentIn(string student) {
 }
 
 // TODO: remove stub
-string studentOut2csv(studentOut student) {
+string studentOut2csv(studentOut student)
+{
     return "Test,80.000";
 }
 
-void print(studentIn student) {
+void print(studentIn student)
+{
     cout << student.surname << " ";
-    for (int score: student.rating)
+    for (int score : student.rating)
         cout << score << " ";
     cout << student.isContract << endl;
+}
+
+void print(studentOut student)
+{
+    cout << student.surname << " " << student.avgRating << endl;
+}
+
+vector<studentIn> budgetStudents(vector<studentIn> students)
+{
+    vector<studentIn> budgetList;
+    for (studentIn student : students)
+    {
+        if (student.isContract == 0)
+        {
+            budgetList.push_back(student);
+        }
+    }
+    return budgetList;
+}
+
+vector<studentOut> calcAverageMark(vector<studentIn> budgetList)
+{
+    vector<studentOut> averageMarkList;
+    for (studentIn student : budgetList)
+    {
+        int sum = 0;
+        for (int mark : student.rating)
+        {
+            sum += mark;
+        }
+        double avgRating = roundOff((double)sum / student.rating.size(), 3);
+
+        studentOut student_budget;
+        student_budget.surname = student.surname;
+        student_budget.avgRating = avgRating;
+        averageMarkList.push_back(student_budget);
+    }
+    return averageMarkList;
 }

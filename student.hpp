@@ -10,7 +10,7 @@ struct studentIn {
 
 struct studentOut {
     std::string surname;
-    float avgRating;
+    double avgRating;
 };
 
 // конвертує рядок розділений комами в структуру
@@ -18,4 +18,12 @@ studentIn csv2studentIn(std::string);
 
 // конвертує стуктуру в рядок розділений комами
 std::string studentOut2csv(studentOut);
+// вивід данних студентів
 void print(studentIn);
+void print(studentOut);
+
+// створює окремий список бюджетників
+std::vector<studentIn> budgetStudents(std::vector<studentIn> students);
+
+// обчислення для кожного студента-бюджетника середнього балу
+std::vector<studentOut> calcAverageMark(std::vector<studentIn> budgetList);

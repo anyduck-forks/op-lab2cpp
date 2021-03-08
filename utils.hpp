@@ -10,3 +10,6 @@ bool flag2bool(std::string);
 
 // поділяє рядок за розділювачем
 std::vector<std::string> split(std::string, char);
+
+// округлення числа
+double roundOff(double x, int precision);
