@@ -71,3 +71,18 @@ vector<studentOut> calcAverageMark(vector<studentIn> budgetList)
     }
     return averageMarkList;
 }
+
+vector<studentOut> sortingList(vector<studentOut> averageMarkList)
+{
+    for (size_t i = 0; i < averageMarkList.size() - 1; i++)
+    {
+        for (size_t j = 0; j < averageMarkList.size() - i - 1; j++)
+        {
+            if (averageMarkList.at(j).avgRating < averageMarkList.at(j+1).avgRating) 
+            {
+             swap(averageMarkList.at(j), averageMarkList.at(j+1));
+            }
+        }
+    }
+return averageMarkList;
+}

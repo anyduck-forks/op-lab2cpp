@@ -27,3 +27,6 @@ std::vector<studentIn> budgetStudents(std::vector<studentIn> students);
 
 // обчислення для кожного студента-бюджетника середнього балу
 std::vector<studentOut> calcAverageMark(std::vector<studentIn> budgetList);
+
+// сортування списку бюджетників
+std::vector<studentOut> sortingList(std::vector<studentOut> averageMarkList);

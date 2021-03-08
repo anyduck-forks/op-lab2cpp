@@ -67,5 +67,9 @@ int main()
     for (studentOut rating_student : table_rating)
         print(rating_student);
 
+    table_rating = sortingList(table_rating);
+    cout << "===========" << endl;
+    for (studentOut rating_student : table_rating)
+        print(rating_student);
     return 0;
 }
