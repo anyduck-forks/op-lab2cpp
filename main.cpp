@@ -71,5 +71,9 @@ int main()
     cout << "===========" << endl;
     for (studentOut rating_student : table_rating)
         print(rating_student);
+    table_rating = cuttingList(table_rating);
+    cout << "===========" << endl;
+    for (studentOut rating_student : table_rating)
+        print(rating_student);
     return 0;
 }

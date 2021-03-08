@@ -78,11 +78,18 @@ vector<studentOut> sortingList(vector<studentOut> averageMarkList)
     {
         for (size_t j = 0; j < averageMarkList.size() - i - 1; j++)
         {
-            if (averageMarkList.at(j).avgRating < averageMarkList.at(j+1).avgRating) 
+            if (averageMarkList.at(j).avgRating < averageMarkList.at(j + 1).avgRating)
             {
-             swap(averageMarkList.at(j), averageMarkList.at(j+1));
+                swap(averageMarkList.at(j), averageMarkList.at(j + 1));
             }
         }
     }
-return averageMarkList;
+    return averageMarkList;
+}
+
+vector<studentOut> cuttingList(vector<studentOut> averageMarkList)
+{
+    size_t new_size = averageMarkList.size() * 40 / 100;
+    averageMarkList.resize(new_size);
+    return averageMarkList;
 }

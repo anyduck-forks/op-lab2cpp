@@ -30,3 +30,6 @@ std::vector<studentOut> calcAverageMark(std::vector<studentIn> budgetList);
 
 // сортування списку бюджетників
 std::vector<studentOut> sortingList(std::vector<studentOut> averageMarkList);
+
+//обрізання списку до 40% 
+std::vector<studentOut> cuttingList(std::vector<studentOut> averageMarkList);
